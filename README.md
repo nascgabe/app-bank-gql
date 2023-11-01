@@ -1,4 +1,4 @@
-# Projeto appp-bank-gql com Nest.js, GraphQL, MongoDB e Prisma
+# Projeto app-bank-gql com Nest.js, GraphQL, MongoDB e Prisma
 
 Este é um projeto simples que utiliza o framework Nest.js com MongoDB como banco de dados e o Prisma como ORM, além do GraphQL.
 
