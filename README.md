@@ -1,73 +1,37 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Projeto appp-bank-gql com Nest.js, GraphQL, MongoDB e Prisma
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Este é um projeto simples que utiliza o framework Nest.js com MongoDB como banco de dados e o Prisma como ORM, além do GraphQL.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Pré-requisitos
 
-## Description
+Verifique se você tem os seguintes requisitos instalado na sua máquina:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- [Node.js](https://nodejs.org/)
 
-## Installation
+- [MongoDB](https://www.mongodb.com/try/download/community)
 
-```bash
-$ yarn install
-```
+## Configuração do MongoDB
 
-## Running the app
+1. Verifique se o MongoDB está instalado e em execução na sua máquina. Para executar você precisará entrar no arquivo onde está o MongoDB e executar o comando "mongod".
 
-```bash
-# development
-$ yarn run start
+2. Crie um banco de dados MongoDB para o seu projeto.
 
-# watch mode
-$ yarn run start:dev
+3. Nesse repositório está o arquivo da collection account.json para o seu banco.
 
-# production mode
-$ yarn run start:prod
-```
+4. Copie a connection string e cole-a no arquivo `.env` na raiz do projeto. No arquivo terá uma variável DATABASE_URL, você irá colocar sua connection string como valor dela. 
+ 
+## Configurações do Prisma
 
-## Test
+1. Todas as configurações estão feitas porém recomendo instalar o Prisma separadamente e globalmente das outras dependências:
+<p>yarn add -g prisma</p>
 
-```bash
-# unit tests
-$ yarn run test
+## Intalação das Dependências
 
-# e2e tests
-$ yarn run test:e2e
+1. Instale as dependências do projeto executando:
+   <p>yarn install</p>
 
-# test coverage
-$ yarn run test:cov
-```
+## Executando o Projeto
 
-## Support
+Agora que o MongoDB, o Prisma e as dependências do projeto estão configurados, você pode iniciar o projeto com o watcher use o seguinte comando:
+<p>yarn start:dev</p>
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
