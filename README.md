@@ -35,3 +35,33 @@ Verifique se você tem os seguintes requisitos instalado na sua máquina:
 Agora que o MongoDB, o Prisma e as dependências do projeto estão configurados, você pode iniciar o projeto com o watcher use o seguinte comando:
 <p>yarn start:dev</p>
 
+## Testando a API
+
+Com o projeto em execução entre na localhost com a porta definida no arquivo main.ts e adicione um /graphql. Ficaria mais ou menos assim:
+<p>http://localhost:3040/graphql</p>
+
+Ele abrirá um servidor que você poderá testar os endpoints.
+
+## Consulta GraphQL para Obter o Saldo da Conta, Depositar e Sacar
+
+```graphql
+query {
+  getAccountBalance(accountNumber: 1416) {
+    accountNumber
+    balance
+  }
+}
+
+mutation {
+  updateAccountBalance(accountNumber: 1416, updateAccountInput: { balance: -100 }) {
+    accountNumber
+    balance
+  }
+}
+
+mutation {
+  updateAccountBalance(accountNumber: 1416, updateAccountInput: { balance: 200 }) {
+    accountNumber
+    balance
+  }
+}
